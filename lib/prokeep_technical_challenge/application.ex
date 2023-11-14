@@ -14,7 +14,8 @@ defmodule ProkeepTechnicalChallenge.Application do
       # Start a worker by calling: ProkeepTechnicalChallenge.Worker.start_link(arg)
       # {ProkeepTechnicalChallenge.Worker, arg},
       # Start to serve requests, typically the last entry
-      ProkeepTechnicalChallengeWeb.Endpoint
+      ProkeepTechnicalChallengeWeb.Endpoint,
+      ProkeepTechnicalChallenge.MessageQueue
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
