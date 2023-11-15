@@ -7,6 +7,8 @@
 # General application configuration
 import Config
 
+config :prokeep_technical_challenge, :message_handler_interval, 1000
+
 config :prokeep_technical_challenge,
   generators: [timestamp_type: :utc_datetime]
 

@@ -14,6 +14,10 @@ defmodule ProkeepTechnicalChallenge.MessageTimer do
 
   @impl true
   def handle_cast({:restart, at_time}, _state) do
-    {:noreply, NaiveDateTime.add(at_time, 1)}
+    {:noreply, NaiveDateTime.add(at_time, message_handler_interval(), :millisecond)}
+  end
+
+  defp message_handler_interval do
+    Application.get_env(:prokeep_technical_challenge, :message_handler_interval)
   end
 end

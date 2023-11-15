@@ -24,9 +24,13 @@ defmodule ProkeepTechnicalChallenge.MessageQueue do
     IO.puts(first_message)
 
     unless Enum.empty?(updated_messages) do
-      Process.send_after(self(), :pop, 1000)
+      Process.send_after(self(), :pop, message_handler_interval())
     end
 
     {:noreply, updated_messages}
+  end
+
+  defp message_handler_interval do
+    Application.get_env(:prokeep_technical_challenge, :message_handler_interval)
   end
 end
