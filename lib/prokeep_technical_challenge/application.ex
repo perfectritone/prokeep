@@ -15,7 +15,7 @@ defmodule ProkeepTechnicalChallenge.Application do
       # {ProkeepTechnicalChallenge.Worker, arg},
       # Start to serve requests, typically the last entry
       ProkeepTechnicalChallengeWeb.Endpoint,
-      ProkeepTechnicalChallenge.MessageQueue
+      ProkeepTechnicalChallenge.MessageTimersAgent
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
